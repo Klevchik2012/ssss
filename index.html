@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>asdf</title>
+    </head>
+    <body>
+        <h1>Главное</h1>
+        <form method="post" action="/">
+            <select name="victorina">
+                {% for id,name in victorina %}
+                <option value="{{id}}">{{name}}</option>
+                {% endfor %}
+            </select>
+            <p><input type="submit" value="Начать"></p>
+        </form>
+    </body>
+</html>
